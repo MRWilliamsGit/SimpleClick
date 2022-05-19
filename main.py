@@ -1,5 +1,5 @@
 #Maria Williams 5/19/22
-#playing around with Click
+#playing around with click
 #referencing https://zetcode.com/python/click/
 
 import click
@@ -10,10 +10,10 @@ import click
 #option: pass by adding after tag
 @click.option('--lang', default="english", help="type english or spanish")
 @click.option("--name", prompt="Your name", help="Provide your name")
-def hello(l, name):
-    if l=="english":
+def hello(lang, name):
+    if lang=="english":
         click.echo(f'Hello {name}')
-    elif l=="spanish":
+    elif lang=="spanish":
         click.echo(f'Hola {name}')
     else:
         click.echo('Language not recognized')
