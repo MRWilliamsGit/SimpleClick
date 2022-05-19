@@ -6,11 +6,13 @@ import click
 
 @click.command()
 #argument: pass by adding after command
-#@click.argument('name', default='guest')
+#@click.argument('hw', default='world')
+
 #option: pass by adding after tag
-@click.option('--lang', default="english", help="type english or spanish")
 @click.option("--name", prompt="Your name", help="Provide your name")
-def hello(lang, name):
+@click.option('--lang', default="english", help="type english or spanish")
+
+def hello(name, lang):
     if lang=="english":
         click.echo(f'Hello {name}')
     elif lang=="spanish":
