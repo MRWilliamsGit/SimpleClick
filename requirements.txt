@@ -1,6 +1,5 @@
 black
 click
-pickle
 pytest
 pytest-cov
 pylint

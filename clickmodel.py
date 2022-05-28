@@ -3,16 +3,19 @@
 #see if I can get a model working
 
 import click
+import pickle
 import torch
 import transformers
 from transformers import GPT2Tokenizer
 
 
 @click.command()
-@click.argument('call', prompt="Say Something:", help="Provide some text that the model can use to generate more text")
+@click.option('--call', prompt="Say Something", help="Provide some text that the model can use to generate more text")
 #@click.option("--say", prompt="Your name", help="Provide your name")
 def hello(call):
-    model = pickle.load(open('model.pkl', 'rb'))
+    #model = pickle.load(open('model.pkl', 'rb'))
+    with open('model.pkl', 'rb') as file:
+        model = pickle.load(file)
     tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
     input_ids = tokenizer.encode(call, return_tensors='pt')
