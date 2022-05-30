@@ -1,7 +1,7 @@
 black
 click
+lfs
 pytest
 pytest-cov
 pylint
-torch
 transformers
