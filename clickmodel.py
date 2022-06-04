@@ -1,6 +1,5 @@
-#Maria Williams 5/27/22
-#playing around with click
-#see if I can get a model working
+#Maria Williams 6/4/22
+#using click to call a model
 
 import click
 import pickle
@@ -8,22 +7,23 @@ import torch
 import transformers
 from transformers import GPT2Tokenizer
 
-
 @click.command()
-@click.option('--call', prompt="Say Something", help="Provide some text that the model can use to generate more text")
-#@click.option("--say", prompt="Your name", help="Provide your name")
-def hello(call):
-    #model = pickle.load(open('model.pkl', 'rb'))
+def hello():
     with open('model.pkl', 'rb') as file:
         model = pickle.load(file)
     tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+    q="no"
+    click.echo('Let me finish your thought! Type "hush" to stop chatting.')
 
-    input_ids = tokenizer.encode(call, return_tensors='pt')
-    output = model.generate(input_ids, max_length = 20, num_return_sequences=1)
-    output = tokenizer.decode(output[0])
-
-
-    click.echo(f'{output}')
+    while True:
+        call = click.prompt('What is on your mind?')
+        if call=="hush":
+            break
+        input_ids = tokenizer.encode(call, return_tensors='pt')
+        output = model.generate(input_ids, max_length = 20, num_return_sequences=1, pad_token_id=tokenizer.eos_token_id)
+        output = tokenizer.decode(output[0])
+        click.echo(f'{output}')
+    click.echo("Goodbye")
 
 if __name__ == '__main__':
     hello()
