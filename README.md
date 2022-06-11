@@ -1,13 +1,20 @@
 # SimpleClick
 
-This is a simple project that demonstrates how to interact with a maching learning model from the command line using the Click python package.
+This project demonstrates how to interact with a maching learning model from the command line using the Click python package.
 
-The model used is the pretrained GPT-2 model pulled from Hugging Face
+The model used is the pretrained GPT-2 model, which generates new text based on text imput.
 
 ## How To Use:
 
-#### Step 1: Clone this repo to the development environment of your choice.
-#### Setp 2: Install all dependancies from requirements.txt.
+#### Step 1: Clone this repo to the development environment of your choice. 
+
+Note: if further down the line you receive a "_pickle.UnpicklingError: invalid load key, 'v'." error, that means you do not have git lfs configured properly. Install it, and pull the repo again with lfs.
+
+```
+git lfs pull
+```
+
+#### Setp 2: Install all the dependancies from requirements.txt.
 
 It is best practice to establish a virtual environment first. Use the command line to navigate to the folder containing these files, and then, if your environment supports Makefile:
 
@@ -31,6 +38,7 @@ The program will print a welcome message and prompt you to type in any text you 
 
 ## Example Command Line Results
 
+!["Example"](https://github.com/MRWilliamsGit/SimpleClick/blob/main/example_screenshot.png?raw=true)
 
 ## References
 
