@@ -3,8 +3,6 @@
 
 import click
 import pickle
-#import torch
-#import transformers
 from transformers import GPT2Tokenizer
 
 # open model, instantiate tokenizer, and print welcome message
