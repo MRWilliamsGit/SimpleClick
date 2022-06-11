@@ -4,5 +4,6 @@ lfs
 pytest
 pytest-cov
 pylint
+torchvision
 torch
 transformers

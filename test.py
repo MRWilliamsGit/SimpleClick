@@ -1,11 +1,12 @@
-#Maria Williams
-#6/6/22
-#https://click.palletsprojects.com/en/8.1.x/testing/
+# Maria Williams
+# 6/10/22
 
-from click.testing import CliRunner
-from clickmodel import hello
+from transformers import GPT2Tokenizer
+from clickmodel import lmodel, chat
+
 
 def test_run():
-    runner = CliRunner()
-    result = runner.invoke(hello)
-    assert result.output == 'Let me finish your thought! Type "hush" to stop chatting.'
+    m = lmodel()
+    tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+    result = chat(m, tokenizer, "hi")
+    assert len(result) > 0
