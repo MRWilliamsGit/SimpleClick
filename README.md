@@ -8,7 +8,7 @@ The model used is the pretrained GPT-2 model, which generates new text based on 
 
 #### Step 1: Clone this repo to the development environment of your choice. 
 
-Note: if further down the line you receive a "_pickle.UnpicklingError: invalid load key, 'v'." error, that means you do not have git lfs configured properly. Install it, and pull the repo again with lfs.
+Note: If you later receive an error with the note: "_pickle.UnpicklingError: invalid load key, 'v'.", this means that you do not have git lfs configured properly. Install it, and pull the repo again with lfs.
 
 ```
 git lfs pull
@@ -42,5 +42,5 @@ The program will print a welcome message and prompt you to type in any text you 
 
 ## References
 
-Click: https://click.palletsprojects.com/en/8.1.x/
-GPT-2: https://huggingface.co/gpt2
+- Click: https://click.palletsprojects.com/en/8.1.x/
+- GPT-2: https://huggingface.co/gpt2
