@@ -1,3 +1,5 @@
+[![SimpleClick Test](https://github.com/MRWilliamsGit/SimpleClick/actions/workflows/main.yml/badge.svg)](https://github.com/MRWilliamsGit/SimpleClick/actions/workflows/main.yml)
+
 # SimpleClick
 
 This project demonstrates how to interact with a maching learning model from the command line using the Click python package.
