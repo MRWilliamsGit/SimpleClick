@@ -2,7 +2,7 @@
 
 # SimpleClick
 
-This project demonstrates how to interact with a maching learning model from the command line using the Click python package.
+This project demonstrates how to interact with a machine learning model from the command line using the Click python package.
 
 The model used is the pretrained GPT-2 model, which generates new text based on text imput.
 
