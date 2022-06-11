@@ -9,6 +9,6 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C main.py
+	pylint --disable=R,C clickmodel.py
 
 all: install test format lint
